@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dbp6ai8qas0o5"]
+
+[ext_resource type="Texture2D" uid="uid://2cyl58jkibqe" path="res://icon.svg" id="1_lr6et"]
+[ext_resource type="Texture2D" uid="uid://cebhuu228s0ep" path="res://assets/characters/DinoSprites - doux.png" id="2_mofaj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dq7i8"]
+atlas = ExtResource("2_mofaj")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4yhd"]
+atlas = ExtResource("2_mofaj")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yskd6"]
+atlas = ExtResource("2_mofaj")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22hif"]
+atlas = ExtResource("2_mofaj")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ukl5l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dq7i8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4yhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yskd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22hif")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lr6et"]
+font_size = 32
+
+[node name="demomap" type="Node2D" unique_id=1976175449]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=51522719]
+position = Vector2(-0.4999962, 81.50001)
+scale = Vector2(2.9453125, 0.3671875)
+texture = ExtResource("1_lr6et")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1698155832]
+sprite_frames = SubResource("SpriteFrames_ukl5l")
+animation = &"idle"
+autoplay = "idle"
+frame = 3
+frame_progress = 0.96305555
+speed_scale = 2.0
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=21985097]
+zoom = Vector2(3, 3)
+
+[node name="Label" type="Label" parent="." unique_id=171818815]
+offset_left = -96.0
+offset_top = -97.0
+offset_right = 96.0
+offset_bottom = -47.0
+text = "Casey Lyons"
+label_settings = SubResource("LabelSettings_lr6et")
