@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://2cyl58jkibqe" path="res://icon.svg" id="1_lr6et"]
 [ext_resource type="Texture2D" uid="uid://cebhuu228s0ep" path="res://assets/characters/DinoSprites - doux.png" id="2_mofaj"]
+[ext_resource type="FontFile" uid="uid://b42kcbd2ri7xp" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_mofaj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dq7i8"]
 atlas = ExtResource("2_mofaj")
@@ -40,6 +41,7 @@ animations = [{
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lr6et"]
+font = ExtResource("3_mofaj")
 font_size = 32
 
 [node name="demomap" type="Node2D" unique_id=1976175449]
@@ -57,13 +59,13 @@ frame = 3
 frame_progress = 0.96305555
 speed_scale = 2.0
 
-[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=21985097]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=21985097]
 zoom = Vector2(3, 3)
 
 [node name="Label" type="Label" parent="." unique_id=171818815]
-offset_left = -96.0
-offset_top = -97.0
-offset_right = 96.0
-offset_bottom = -47.0
+offset_left = -168.0
+offset_top = -95.0
+offset_right = 168.0
+offset_bottom = -45.0
 text = "Casey Lyons"
 label_settings = SubResource("LabelSettings_lr6et")
