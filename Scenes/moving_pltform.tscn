@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bo6uc78wvmvvh"]
+
+[ext_resource type="Texture2D" uid="uid://dvjaj3tvyfla6" path="res://assets/tilesets/props.png" id="1_ngtdo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yl6v4"]
+size = Vector2(32, 16)
+
+[node name="Moving Pltform" type="AnimatableBody2D" unique_id=756764044]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=752969360]
+texture = ExtResource("1_ngtdo")
+region_enabled = true
+region_rect = Rect2(256, 191, 32, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=667289525]
+shape = SubResource("RectangleShape2D_yl6v4")
+one_way_collision = true
