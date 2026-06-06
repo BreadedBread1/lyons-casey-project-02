@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bwqejajk3n7li"]
+
+[ext_resource type="Script" uid="uid://cdu6qqkeis2hj" path="res://Scripts/main_menu.gd" id="1_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://c6cno6ajmdce0" path="res://assets/tilesets/back.png" id="2_ce3w2"]
+[ext_resource type="FontFile" uid="uid://b42kcbd2ri7xp" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_n45e2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_opfnp"]
+font = ExtResource("3_n45e2")
+font_size = 64
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Main Menu" type="Control" unique_id=2146364033]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ehe0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=153037445]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_ce3w2")
+
+[node name="Menu Container" type="VBoxContainer" parent="." unique_id=1794273082]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 407.0
+offset_top = 166.0
+offset_right = -407.0
+offset_bottom = -201.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Menu Container" unique_id=914092854]
+layout_mode = 2
+text = "Game"
+label_settings = SubResource("LabelSettings_opfnp")
+horizontal_alignment = 1
+
+[node name="Play Button" type="Button" parent="Menu Container" unique_id=220999720]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 48
+text = "PLAY"
+
+[node name="Options Button" type="Button" parent="Menu Container" unique_id=895247171]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 48
+text = "OPTIONS"
+
+[node name="Quit Button" type="Button" parent="Menu Container" unique_id=18745761]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_n45e2")
+theme_override_font_sizes/font_size = 48
+text = "QUIT"
+
+[connection signal="pressed" from="Menu Container/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Menu Container/Quit Button" to="." method="_on_quit_button_pressed"]

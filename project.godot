@@ -11,9 +11,21 @@ config_version=5
 [application]
 
 config/name="LyonsCasey_Project_02"
-run/main_scene="uid://dmf7s0l6mout8"
+run/main_scene="uid://bwqejajk3n7li"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://02axf7bxtew0"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+gdscript/warnings/unsafe_property_access=2
+gdscript/warnings/unsafe_method_access=2
+gdscript/warnings/unsafe_cast=1
+gdscript/warnings/unsafe_call_argument=2
 
 [input]
 
